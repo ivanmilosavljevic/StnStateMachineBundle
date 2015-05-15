@@ -13,8 +13,7 @@ use Stn\StateMachineBundle\StateMachine\BaseStateful;
  * @ORM\Entity()
  *
  * @State(
- *   class="Stn\StateMachineBundle\Entity\Orders",
- *   graph="order",
+ *   class="Stn\StateMachineBundle\Example\Orders",
  *   propertyPath="state",
  *   states={
  *     "PENDING"={
@@ -54,7 +53,7 @@ use Stn\StateMachineBundle\StateMachine\BaseStateful;
  *   }
  * )
  * @State(
- *   class="Stn\StateMachineBundle\Entity\Orders",
+ *   class="Stn\StateMachineBundle\Example\Orders",
  *   graph="payment",
  *   propertyPath="paymentState",
  *   states={
@@ -73,7 +72,7 @@ use Stn\StateMachineBundle\StateMachine\BaseStateful;
  *   }
  * )
  * @State(
- *   class="Stn\StateMachineBundle\Entity\Orders",
+ *   class="Stn\StateMachineBundle\Example\Orders",
  *   graph="shipment",
  *   propertyPath="shippingState",
  *   states={

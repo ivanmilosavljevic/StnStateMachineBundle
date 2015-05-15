@@ -15,7 +15,6 @@ class DefaultController extends Controller
      */
     public function testSmAction()
     {
-        $em = $this->getDoctrine()->getManager();
         $staetMachineFactory = $this->get('stn_state_machine.state_machine.factory');
 
         $order = new Orders();
@@ -23,7 +22,7 @@ class DefaultController extends Controller
 
         dump($order);
 
-        $orderStateMachine = $staetMachineFactory->get($order, 'order');
+        $orderStateMachine = $staetMachineFactory->get($order);
         $paymentStateMachine = $staetMachineFactory->get($order, 'payment');
         $shipmentStateMachine = $staetMachineFactory->get($order, 'shipment');
 

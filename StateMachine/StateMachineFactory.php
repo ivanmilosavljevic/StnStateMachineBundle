@@ -80,7 +80,7 @@ class StateMachineFactory implements StateMachineFactoryInterface
 	/**
 	 * {@inheritdoc}
 	 */
-	public function get(BaseStateful $entity, $graph)
+	public function get(BaseStateful $entity, $graph = null)
 	{
 		$loader = null;
 		$stateMachine = null;

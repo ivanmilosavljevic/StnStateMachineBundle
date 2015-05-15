@@ -1,0 +1,24 @@
+services:
+    #
+    # State Machine
+    #
+    stn_state_machine.state_machine:
+        class: Finite\StateMachine\StateMachine
+
+    #
+    # State machine factory
+    #
+    stn_state_machine.state_machine.factory:
+        class: Stn\StateMachineBundle\StateMachine\StateMachineFactory
+        calls:
+            - [ setReader, [ @annotation_reader ] ]
+            - [ setContainer, [ @service_container ] ]
+
+    # ---- ---- ---- ---- ---- ---- ---- ----
+    #
+    # Callback services
+    #
+    # ---- ---- ---- ---- ---- ---- ---- ----
+    stn_state_machine.callback.order:
+        class: Stn\StateMachineBundle\Example\OrderCallbacks
+        arguments: [ @service_container ]

@@ -8,15 +8,22 @@
             "email": "santinowu.wsq@gmail.com"
         }
     ],
+    "homepage": "https://github.com/Santino-Wu/StnStateMachineBundle",
     "keywords" : [ "symfony", "statemachine", "bundle", "annotation" ],
     "license": "MIT",
     "require": {
+        "php": ">=5.3.3",
         "yohang/finite": "~1.0"
     },
     "target-dir" : "Stn/StateMachineBundle",
     "autoload" : {
         "psr-0" : {
             "Stn\\StateMachineBundle" : ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
         }
     }
 }

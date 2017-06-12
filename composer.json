@@ -1,14 +1,14 @@
 {
-    "name": "stn/state-machine-bundle",
+    "name": "stn-machine/state-machine-bundle",
     "description": "This bundle provides annotation tool to use state machine with Symfony and makes transitions more flexible.",
     "type" : "symfony-bundle",
     "authors": [
         {
-            "name": "Santino Wu",
-            "email": "santinowu.wsq@gmail.com"
+            "name": "Ivan M.",
+            "email": "ivan.milosavljevich@gmail.com"
         }
     ],
-    "homepage": "https://github.com/Santino-Wu/StnStateMachineBundle",
+    "homepage": "https://github.com/ivanmilosavljevic/StnStateMachineBundle",
     "keywords" : [ "symfony", "statemachine", "bundle", "annotation" ],
     "license": "MIT",
     "require": {

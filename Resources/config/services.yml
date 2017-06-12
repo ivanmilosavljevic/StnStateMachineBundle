@@ -11,8 +11,8 @@ services:
     stn_state_machine.state_machine.factory:
         class: Stn\StateMachineBundle\StateMachine\StateMachineFactory
         calls:
-            - [ setReader, [ @annotation_reader ] ]
-            - [ setContainer, [ @service_container ] ]
+            - [ setReader, [ "@annotation_reader" ] ]
+            - [ setContainer, [ "@service_container" ] ]
 
     # ---- ---- ---- ---- ---- ---- ---- ----
     #
@@ -21,4 +21,4 @@ services:
     # ---- ---- ---- ---- ---- ---- ---- ----
     stn_state_machine.callback.order:
         class: Stn\StateMachineBundle\Example\OrderCallbacks
-        arguments: [ @service_container ]
+        arguments: [ "@service_container" ]

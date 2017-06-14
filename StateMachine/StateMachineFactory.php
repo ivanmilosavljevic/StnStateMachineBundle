@@ -96,7 +96,7 @@ class StateMachineFactory implements StateMachineFactoryInterface
 		foreach ($states as $state) {
 			if ($graph === $state->getGraph()) {
 				$loader = new ArrayLoader($state->toArray());
-				$stateMachine = new StateMachine($entity);
+				$stateMachine = new StateMachine($entity, $this->container->get('event_dispatcher'));
 
 				$loader->load($stateMachine);
 				$stateMachine->initialize();
